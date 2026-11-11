@@ -1,0 +1,9 @@
+    sudo install -d -m 0750 /etc/prestashop
+    sudo tee /etc/prestashop/app.env >/dev/null <<'ENV'
+    DB_HOST="prestashop-mysql.abc123xyz.us-east-1.rds.amazonaws.com"
+    DB_ADMIN_USER="psadmin"
+    DB_ADMIN_PASSWORD="CHANGE-ME"
+    DB_APP_USER="ps_app"
+    DB_APP_PASSWORD="CHANGE-ME-TOO"
+    ENV
+    sudo chmod 600 /etc/prestashop/app.env
