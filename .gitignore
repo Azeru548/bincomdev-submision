@@ -1,0 +1,21 @@
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfvars
+!*.tfvars.example
+.terraform.lock.hcl
+
+# Generated SSH keys and captured evidence
+*.pem
+*.pem.pub
+screenshots/*.png
+!screenshots/.gitkeep
+
+# Logs
+*.log
+
+# Local download artifacts (git bundles etc.)
+/artifacts/

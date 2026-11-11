@@ -1,0 +1,23 @@
+# Copy to terraform.tfvars and edit before running `terraform apply`.
+
+region = "us-east-1"
+
+project   = "prestashop"
+owner_tag = "your-name-or-student-id"
+
+# REQUIRED - only your address can reach SSH. Get it with:
+#   curl -s https://checkip.amazonaws.com
+admin_cidr = "203.0.113.24/32"
+
+# Free-tier sizing
+instance_type     = "t4g.small"   # T4g free trial until 2026-12-31; legacy accounts: "t3.micro"
+db_instance_class = "db.t4g.micro"
+
+# Store back office
+shop_name      = "PrestaShop on AWS"
+admin_email    = "admin@example.com"
+admin_password = "ChangeMe!2026Demo"
+admin_firstname = "Store"
+admin_lastname  = "Admin"
+
+ps_version = "8.2.9"
