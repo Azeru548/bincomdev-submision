@@ -1,0 +1,4 @@
+| | Legacy free tier (account created **before 15 Jul 2025**) | Current Free Plan (accounts created after) |
+|---|---|---|
+| EC2 | 750 h/month of `t2.micro` / `t3.micro` for 12 months | $100 credit + up to $100 more for setup activities; EC2 draws on the credits, Free Plan expires after 6 months |
+| T4g trial | `t4g.small` 750 h/month free for **all** account types **until 31 Dec 2026** | Same |
