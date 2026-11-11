@@ -1,0 +1,16 @@
+## 5. Path A - automated deployment
+
+Run terraform init, plan and apply from the infra directory after copying the
+terraform.tfvars example. Bootstrap takes 6-10 minutes.
+
+## 6. Path B - manual AWS Console
+
+Create the VPC with two public and two private subnets and no NAT gateway, then
+the two security groups, then the RDS instance, then the EC2 instance, then the
+Elastic IP, then install the stack over SSH.
+
+## 7. Why these choices
+
+EC2 plus RDS keeps the database off the application host; the private subnet
+keeps it off the internet; Ubuntu 22.04 is required because PrestaShop 8.2.9
+caps PHP at 8.1.
