@@ -1,0 +1,23 @@
+```
+                    Internet (student / grader)
+                              |
+                              |  HTTP :80
+                              v
+                 +----------------------------+
+                 |  Elastic IP (static)        |
+                 |  ec2-<ip>.compute-1.amazonaws.com
+                 +-------------+--------------+
+                               |
+   VPC 10.20.0/16              v
+   +---------------------------------------------------------------+
+   |  public subnet 10.20.10.0/24 (us-east-1a)                     |
+   |    EC2  prestashop-app   t4g.small, Ubuntu 22.04 arm64        |
+   |    SG prestashop-app-sg: 80/443 world, 22 admin IP only        |
+   +-----------------------------+---------------------------------+
+                                 |  TCP 3306 (SG-to-SG reference only)
+                                 v
+   |  private subnet 10.20.20.0/24 (us-east-1a)                    |
+   |    RDS  prestashop-mysql  db.t4g.micro, MySQL 8.0             |
+   |    route table: no 0.0.0.0/0 route (no NAT, no egress)         |
+   +---------------------------------------------------------------+
+```
