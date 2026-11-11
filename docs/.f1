@@ -1,7 +1,0 @@
-```bash
-cd infra
-cp terraform.tfvars.example terraform.tfvars
-terraform init
-```
-
-No other command-plus-URL lines are left except the two we removed.

@@ -1,2 +1,0 @@
-UPDATE ps_configuration SET value='x' WHERE name IN ('PS_SHOP_DOMAIN');
-SELECT COUNT(*) AS tables FROM information_schema.tables WHERE table_schema="prestashop";

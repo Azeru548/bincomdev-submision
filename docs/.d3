@@ -1,6 +1,0 @@
-| # | Decision | Rationale / alternative rejected |
-|---|---|---|
-| 1 | **Two hosts: EC2 + RDS** | Explicit requirement. RDS also gives managed backups, patching and point-in-time recovery; the app host holds no data that cannot be rebuilt. |
-| 4 | **Ubuntu 22.04 LTS, not 24.04** | PrestaShop 8.2.9's installer hard-caps PHP at 8.1 (`_PS_INSTALL_MAXIMUM_PHP_VERSION_ID_ = 81099`); 24.04 ships PHP 8.3 and is rejected. |
-| 10 | **Shop domain read from IMDSv2 at boot** | `--domain` must match the address users type, otherwise links and back-office redirects point at `localhost`. `--rewrite=0` initially avoids 404s until friendly URLs are proven. |
-| 15 | **Installer gzipped into EC2 user-data** | The raw base64 bootstrap measured 15.7 KiB against EC2's 16 KiB cap; `base64gzip` plus a Terraform precondition keeps the plan honest. |

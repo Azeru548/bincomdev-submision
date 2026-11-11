@@ -1,8 +1,0 @@
-```bash
-cd infra
-terraform apply  tfplan
-terraform output -raw next_steps
-ssh -i prestashop-key.pem ubuntu@$(terraform output -raw public_ip) \
-    'sudo tail -f /var/log/prestashop-install.log'     # watch bootstrap
-./scripts/verify-deployment.sh "$(cd infra && terraform output -raw store_url)"
-```
