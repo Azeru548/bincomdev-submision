@@ -13,6 +13,8 @@ crash.*.log
 *.pem.pub
 screenshots/*.png
 !screenshots/.gitkeep
+# Exception: the AWS Console exhibits submitted with this assignment are kept
+!docs/screenshots/*.png
 
 # Logs
 *.log
