@@ -21,7 +21,7 @@ The environment consists of:
 
 1. **Working Public URL:** [http://ec2-44-213-194-216.compute-1.amazonaws.com/](http://ec2-44-213-194-216.compute-1.amazonaws.com/)
 2. **Step-by-Step Documentation:** See [`docs/implementation-runbook.md`](docs/implementation-runbook.md).
-3. **AWS Console Screenshots:** Saved in the [`docs/screenshots/`](docs/screenshots/) directory. These prove the configuration decisions, the use of Free Tier instances, and the separation of the database from the app server.
+3. **AWS Console Screenshots:** The capture guide is [`docs/screenshot-checklist.md`](docs/screenshot-checklist.md), which numbers every exhibit **S1–S16** and states what each frame must show and which requirement it proves. The captured images are submitted alongside the report rather than stored in this repository: `docs/screenshots/` does not exist here, and `.gitignore` excludes `screenshots/*.png` on purpose, because AWS Console frames expose account IDs and credentials.
 
 ## Verification Proof
 
